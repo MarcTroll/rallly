@@ -5,7 +5,7 @@ export type EmailContext = {
 };
 
 export const defaultEmailContext = {
-  logoUrl: "https://rallly.co/logo.png",
-  baseUrl: "https://rallly.co",
-  domain: "rallly.co",
+  logoUrl: "https://blau-weiss-stolberg.de/images/style-4/pageLogo-d28c2d75.svg",
+  baseUrl: "https://termine.blau-weiss-stolberg.de",
+  domain: "termine.blau-weiss-stolberg.de",
 };

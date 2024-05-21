@@ -23,21 +23,22 @@ export const RegisterEmail = ({
       ctx={ctx}
       footNote={
         <>
-          You&apos;re receiving this email because a request was made to
-          register an account on <Domain ctx={ctx} />. If this wasn&apos;t you,
-          please ignore this email.
+          Du erhältst diese E-Mail, weil jemand versucht, mit dieser
+          E-Mail-Adresse einen Account auf <Domain ctx={ctx} /> zu erstellen.
+          Wenn du das nicht warst, kannst du diese E-Mail ignorieren.
         </>
       }
       recipientName={name}
-      preview={`Your 6-digit code is: ${code}`}
+      preview={`Dein 6-stelliger Code ist: ${code}`}
     >
       <Text>
-        Please use the following 6-digit verification code to verify your email:
+        Bitte nutze den folgenden 6-stelligen Code zur Verifizierung deiner
+        E-Mail-Adresse:
       </Text>
       <Heading as="h1" style={{ ...trackingWide }} id="code">
         {code}
       </Heading>
-      <Text>This code is valid for 15 minutes</Text>
+      <Text>Dieser Code ist für 15 Minuten gültig.</Text>
     </EmailLayout>
   );
 };

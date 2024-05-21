@@ -23,9 +23,9 @@ const ShareLink = ({
   return (
     <Link
       href={`mailto:?subject=${encodeURIComponent(
-        `Availability for ${title}`,
+        `Terminplanung für ${title}`,
       )}&body=${encodeURIComponent(
-        `Hi all,\nI'm trying to find the best date for ${title}.\nCan you please use the link below to choose your preferred dates:\n${participantLink}\nThank you.\n${name}`,
+        `Hallo zusammen,\nich versuche einen Termin für ${title} zu finden.\nÜber folgenden Link könnt ihr für einen Termin abstimmen:\n${participantLink}\nDanke.\n${name}`,
       )}`}
     >
       {children}
@@ -46,22 +46,23 @@ export const NewPollEmail = ({
       ctx={ctx}
       footNote={
         <>
-          You are receiving this email because a new poll was created with this
-          email address on <Link href={baseUrl}>{domain}</Link>. If this
-          wasn&apos;t you, please ignore this email.
+          Du erhältst diese E-Mail als Information, dass mit deiner
+          E-Mail-Adresse eine Umfrage auf <Link href={baseUrl}>{domain}</Link>
+          erstellt wurde.
+          Wenn du das nicht warst, kannst du diese E-Mail ignorieren.
         </>
       }
       recipientName={name}
-      preview="Share your participant link to start collecting responses."
+      preview="Teile deinen Link um Ergebnisse zu sammeln."
     >
       <Text>
-        Your poll has been successfully created! Here are the details:
+        Deine Umfrage wurde erfolgreich erstellt. Übersicht über deine Umfrage:
       </Text>
       <Card>
         <Text>
-          <strong>Title:</strong> {title}
+          <strong>Titel:</strong> {title}
           <br />
-          <strong>Invite Link:</strong>{" "}
+          <strong>Einladungslink:</strong>{" "}
           <Link href={participantLink}>{participantLink}</Link>
         </Text>
         <Text>
@@ -70,7 +71,7 @@ export const NewPollEmail = ({
             name={name}
             participantLink={participantLink}
           >
-            Share via email
+            Via Email teilen
           </ShareLink>
         </Text>
       </Card>

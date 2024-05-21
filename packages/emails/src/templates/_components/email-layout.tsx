@@ -45,7 +45,7 @@ export const EmailLayout = ({
   footNote,
   ctx,
 }: React.PropsWithChildren<EmailLayoutProps>) => {
-  const { logoUrl, baseUrl } = ctx;
+  const { baseUrl } = ctx;
   return (
     <Html>
       <Head />
@@ -58,7 +58,7 @@ export const EmailLayout = ({
         }}
       >
         <Container style={containerStyles}>
-          <Img src={logoUrl} alt="Rallly" width={128} />
+          <Img src="https://blau-weiss-stolberg.de/images/bw-logo.svg" alt="TC Blau-Weiß Stolberg" width={128} />
           <Section style={sectionStyles}>
             <Text>Hi {recipientName},</Text>
             {children}
@@ -81,19 +81,15 @@ export const EmailLayout = ({
               Home
             </Link>
             <span>&nbsp;&bull;&nbsp;</span>
-            <Link style={linkStyles} href="https://twitter.com/ralllyco">
-              Twitter
-            </Link>
-            <span>&nbsp;&bull;&nbsp;</span>
-            <Link style={linkStyles} href="https://github.com/lukevella/rallly">
-              Github
+            <Link style={linkStyles} href="https://blau-weiss-stolberg.de">
+              TC Blau-Weiß Stolberg
             </Link>
             <span>&nbsp;&bull;&nbsp;</span>
             <Link
               style={linkStyles}
               href={`mailto:${process.env["SUPPORT_EMAIL"]}`}
             >
-              Contact
+              Kontakt
             </Link>
           </Section>
         </Container>
