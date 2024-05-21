@@ -13,7 +13,8 @@ export interface VoteSelectorProps {
   className?: string;
 }
 
-const orderedVoteTypes: VoteType[] = ["yes", "ifNeedBe", "no"];
+// TODO: Remove this @marc
+const orderedVoteTypes: VoteType[] = ["yes", /*"ifNeedBe",*/ "no"];
 
 export const toggleVote = (value?: VoteType) => {
   if (!value) return orderedVoteTypes[0];

@@ -28,7 +28,8 @@
     "release": "./scripts/create-release.sh"
   },
   "prisma": {
-    "seed": "yarn workspace @rallly/database db:seed"
+    "seed": "yarn workspace @rallly/database db:seed",
+    "schema": "packages/database/prisma/schema.prisma"
   },
   "workspaces": [
     "apps/*",
